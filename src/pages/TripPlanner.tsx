@@ -60,18 +60,10 @@ const TripPlanner = () => {
   };
 
   /* -----------------------------
-     REMOVE PLACE (LOW ONLY)
+     REMOVE PLACE (ALL ALLOWED)
   ------------------------------ */
   const removePlace = (index: number) => {
-    const item = editableItems[index];
-
-    // 🚫 Block MEDIUM & HIGH
-    if (item.estimatedCrowd !== 'LOW') {
-      alert('Medium & High priority places cannot be removed');
-      return;
-    }
-
-    setRemovedItems(prev => [...prev, item]);
+    setRemovedItems(prev => [...prev, editableItems[index]]);
     setEditableItems(prev => prev.filter((_, i) => i !== index));
   };
 
@@ -100,9 +92,9 @@ const TripPlanner = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
 
-            {/* =======================
+            {/* ======================
                PREFERENCES
-            ======================== */}
+            ======================= */}
             <Card variant="elevated">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -202,9 +194,9 @@ const TripPlanner = () => {
               </CardContent>
             </Card>
 
-            {/* =======================
+            {/* ======================
                ITINERARY
-            ======================== */}
+            ======================= */}
             <div>
               {itinerary ? (
                 <motion.div
@@ -229,7 +221,7 @@ const TripPlanner = () => {
                     </CardContent>
                   </Card>
 
-                  {/* DESTINATION CARDS */}
+                  {/* DESTINATIONS */}
                   {editableItems.map((item, index) => (
                     <motion.div
                       key={index}
