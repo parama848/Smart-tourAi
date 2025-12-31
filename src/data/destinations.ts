@@ -1,10 +1,19 @@
 // Tamil Nadu Destinations Database
 // This serves as our mock database for the demo
 
+
 export type CrowdLevel = 'LOW' | 'MEDIUM' | 'HIGH';
 export type PlaceType = 'temple' | 'heritage' | 'nature' | 'beach' | 'hill_station' | 'food';
 export type BestSeason = 'summer' | 'monsoon' | 'winter' | 'all';
 export type TimeSlot = 'morning' | 'afternoon' | 'evening';
+import brihadeeswararImg from '../assets/Brihadeeswarar_Temple.jpeg';
+import rameswaramImg from '../assets/Ramanathaswamy_Temple.jpeg';
+import kanniyakumari from '../assets/Kanniyakumari.jpeg';
+import marina from '../assets/marina.jpeg'
+import mudumalai from '../assets/Mudumalai_National_Park.jpeg'
+import cheetinad from '../assets/cheetinad.jpeg'
+import ramanathaswamy from '../assets/Ramanathaswamy_Temple.jpeg'
+
 
 export interface Destination {
   id: string;
@@ -58,7 +67,7 @@ export const destinations: Destination[] = [
     district: 'Thanjavur',
     description: 'A UNESCO World Heritage Site and one of the largest South Indian temples. Built by Raja Raja Chola I, it showcases remarkable Chola architecture.',
     descriptionTamil: 'யுனெஸ்கோ உலக பாரம்பரிய தளமும் தென்னிந்தியாவின் மிகப்பெரிய கோயில்களில் ஒன்றும். ராஜராஜ சோழன் கட்டிய அற்புதமான சோழ கட்டிடக்கலை.',
-    image: 'https://images.unsplash.com/photo-1621427637225-56e774f24e0c?w=800',
+    image:brihadeeswararImg,
     baseCrowdLevel: 'MEDIUM',
     isIndoor: false,
     bestSeason: 'winter',
@@ -138,7 +147,7 @@ export const destinations: Destination[] = [
     district: 'Ramanathapuram',
     description: 'One of the twelve Jyotirlingas, famous for its longest corridor among Hindu temples with magnificently carved pillars.',
     descriptionTamil: 'பன்னிரண்டு ஜோதிர்லிங்கங்களில் ஒன்று, இந்து கோயில்களில் மிக நீளமான தூண்களால் அலங்கரிக்கப்பட்ட நடைபாதை.',
-    image: 'https://images.unsplash.com/photo-1591620774488-720e2f13e5e8?w=800',
+    image: rameswaramImg,
     baseCrowdLevel: 'HIGH',
     isIndoor: true,
     bestSeason: 'winter',
@@ -158,7 +167,7 @@ export const destinations: Destination[] = [
     district: 'Chennai',
     description: 'The longest natural urban beach in India and second longest in the world. A iconic Chennai landmark with stunning sunrise views.',
     descriptionTamil: 'இந்தியாவின் மிக நீளமான நகர்ப்புற கடற்கரை. அற்புதமான சூரிய உதய காட்சிகள் கொண்ட சென்னையின் அடையாளம்.',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800',
+    image: marina,
     baseCrowdLevel: 'HIGH',
     isIndoor: false,
     bestSeason: 'winter',
@@ -178,7 +187,7 @@ export const destinations: Destination[] = [
     district: 'Kanyakumari',
     description: 'The southernmost tip of India where three seas meet. Famous for spectacular sunrise and sunset views at the same spot.',
     descriptionTamil: 'இந்தியாவின் தென்கோடி முனை, மூன்று கடல்கள் சந்திக்கும் இடம். ஒரே இடத்தில் சூரிய உதயமும் அஸ்தமனமும் காணலாம்.',
-    image: 'https://images.unsplash.com/photo-1580892375929-4c42d685e876?w=800',
+    image: kanniyakumari,
     baseCrowdLevel: 'MEDIUM',
     isIndoor: false,
     bestSeason: 'winter',
@@ -198,7 +207,7 @@ export const destinations: Destination[] = [
     district: 'Sivaganga',
     description: 'Magnificent mansions showcasing unique Chettinad architecture with intricate carvings, antique collections, and cultural heritage.',
     descriptionTamil: 'நுட்பமான சிற்பங்கள், பழங்கால சேகரிப்புகள், கலாச்சார பாரம்பரியம் கொண்ட செட்டிநாடு கட்டிடக்கலை.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
+    image: cheetinad,
     baseCrowdLevel: 'LOW',
     isIndoor: true,
     bestSeason: 'all',
@@ -238,7 +247,7 @@ export const destinations: Destination[] = [
     district: 'Nilgiris',
     description: 'A tiger reserve and wildlife sanctuary home to elephants, tigers, leopards, and diverse bird species in the Nilgiri Biosphere.',
     descriptionTamil: 'புலிகள் சரணாலயம், யானைகள், சிறுத்தைகள், பல்வேறு பறவை இனங்கள் வாழும் நீலகிரி உயிர்க்கோளம்.',
-    image: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=800',
+    image: mudumalai,
     baseCrowdLevel: 'LOW',
     isIndoor: false,
     bestSeason: 'winter',
