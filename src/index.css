@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Tamil Nadu Tourism Theme - Temple Gold & Teal */
+    --background: 45 20% 98%;
+    --foreground: 200 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 15%;
+
+    /* Deep Teal - Temple Architecture */
+    --primary: 175 45% 28%;
+    --primary-foreground: 45 40% 95%;
+
+    /* Warm Gold - Temple Ornaments */
+    --secondary: 38 75% 55%;
+    --secondary-foreground: 200 25% 15%;
+
+    /* Soft Cream */
+    --muted: 45 30% 94%;
+    --muted-foreground: 200 15% 45%;
+
+    /* Coral Accent */
+    --accent: 15 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 175 45% 28%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --temple-gold: 38 75% 55%;
+    --temple-gold-light: 40 80% 75%;
+    --temple-teal: 175 45% 28%;
+    --temple-teal-light: 175 35% 45%;
+    --coral: 15 85% 60%;
+    --coral-light: 15 90% 75%;
+    --sand: 45 35% 92%;
+    --deep-brown: 20 35% 20%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(175, 45%, 28%) 0%, hsl(175, 35%, 40%) 50%, hsl(38, 75%, 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38, 75%, 55%) 0%, hsl(40, 80%, 65%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(175, 45%, 28%) 0%, hsl(175, 50%, 38%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(45, 30%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(175 45% 28% / 0.12);
+    --shadow-elevated: 0 12px 40px -8px hsl(175 45% 28% / 0.18);
+    --shadow-gold: 0 8px 30px -6px hsl(38 75% 55% / 0.25);
+
+    --sidebar-background: 45 20% 98%;
+    --sidebar-foreground: 200 25% 15%;
+    --sidebar-primary: 175 45% 28%;
+    --sidebar-primary-foreground: 45 40% 95%;
+    --sidebar-accent: 38 75% 55%;
+    --sidebar-accent-foreground: 200 25% 15%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 175 45% 28%;
+  }
+
+  .dark {
+    --background: 200 25% 10%;
+    --foreground: 45 30% 95%;
+
+    --card: 200 25% 14%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 200 25% 14%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 38 75% 55%;
+    --primary-foreground: 200 25% 10%;
+
+    --secondary: 175 35% 35%;
+    --secondary-foreground: 45 30% 95%;
+
+    --muted: 200 20% 18%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 15 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 20%;
+    --input: 200 20% 20%;
+    --ring: 38 75% 55%;
+
+    --sidebar-background: 200 25% 12%;
+    --sidebar-foreground: 45 30% 95%;
+    --sidebar-primary: 38 75% 55%;
+    --sidebar-primary-foreground: 200 25% 10%;
+    --sidebar-accent: 175 35% 35%;
+    --sidebar-accent-foreground: 45 30% 95%;
+    --sidebar-border: 200 20% 20%;
+    --sidebar-ring: 38 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-teal {
+    background: var(--gradient-teal);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(38, 75%, 55%) 0%, hsl(40, 80%, 70%) 100%);
+  }
+
+  .text-gradient-teal {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(175, 45%, 28%) 0%, hsl(175, 50%, 45%) 100%);
+  }
+
+  /* Crowd level indicators */
+  .crowd-low {
+    @apply bg-emerald-100 text-emerald-700 border-emerald-200;
+  }
+
+  .crowd-medium {
+    @apply bg-amber-100 text-amber-700 border-amber-200;
+  }
+
+  .crowd-high {
+    @apply bg-red-100 text-red-700 border-red-200;
+  }
+
+  /* Tamil pattern overlay */
+  .pattern-kolam {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='30' cy='30' r='8' stroke='%23ffffff' stroke-opacity='0.03' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
